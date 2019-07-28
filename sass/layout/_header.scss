@@ -1,0 +1,53 @@
+.site-header {
+  background-color: black;
+  width: 100%;
+  // padding: cre(10px) 0 cre(40px);
+  // margin-bottom: cre(40px);
+  // z-index: 2;
+
+  @include breakpoint($bp-mobile) {
+    // padding: cre(10px) 0 cre(40px);
+    // margin-bottom: 0;
+    min-height: auto;
+  }
+
+  .site-title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+      > a {
+        display: block;
+        // font-size: cre(28px);
+        color: transparent;
+        height: cre(60px);
+        line-height: 1;
+        padding: 1rem;
+        position: relative;
+
+        @include breakpoint($bp-mobile) {
+          // font-size: cre(48px);
+          height: cre(100px);
+        }
+
+      &::before {
+        content: '';
+        background-image: url('images/dna-logo.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        width: 100%;
+        max-width: cre(217px);
+        height: cre(60px);
+        transform: translateX(-50%);
+
+        @include breakpoint($bp-mobile) {
+          height: cre(80px);
+        }
+      }
+    }
+  } // .site-title
+} // .site-header
