@@ -3,7 +3,8 @@
   width: 100%;
   // padding: cre(10px) 0 cre(40px);
   // margin-bottom: cre(40px);
-  // z-index: 2;
+  position: relative;
+  z-index: 2;
 
   @include breakpoint($bp-mobile) {
     // padding: cre(10px) 0 cre(40px);
