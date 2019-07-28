@@ -12,11 +12,47 @@
     </div>
 
     <div class="container">
-      <?php the_content(); ?>
-      <!-- <h2><span>Excellence</span> is in our DNA</h2>
-      <p class="lead-text">Worldwide Cinema Design and Installation</p>
-      <a class="cta-button" href="mailto:rich@dnacinemas.com">Contact us</a>
-      <p>tel: 07493 821925</p> -->
+      <div class="entry-content">
+        <?php
+          while ( have_posts() ) :
+            the_post();
+        ?>
+
+        <?php
+          the_content();
+      
+          wp_link_pages( array(
+            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dnacinemas' ),
+            'after'  => '</div>',
+          ) );
+        ?>
+      </div><!-- .entry-content -->
+      
+      <?php if ( get_edit_post_link() ) : ?>
+        <footer class="entry-footer">
+          <?php
+            edit_post_link(
+              sprintf(
+                wp_kses(
+                  /* translators: %s: Name of current post. Only visible to screen readers */
+                  __( 'Edit <span class="screen-reader-text">%s</span>', 'dnacinemas' ),
+                  array(
+                    'span' => array(
+                      'class' => array(),
+                    ),
+                  )
+                ),
+                get_the_title()
+              ),
+              '<span class="edit-link">',
+              '</span>'
+            );
+          ?>
+        </footer><!-- .entry-footer -->
+      <?php endif; ?>
+      <?php
+        endwhile; // End of the loop.
+      ?>
     </div>
   </main>
 
