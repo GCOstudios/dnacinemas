@@ -26,6 +26,12 @@
     margin-bottom: 0;
   }
 
+  &.admin-bar {
+
+    .site-main {
+      height: calc(100vh - 185px);
+    }
+  }
   .site-main {
     display: flex;
     flex-flow: column;
