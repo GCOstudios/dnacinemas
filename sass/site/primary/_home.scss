@@ -17,6 +17,10 @@
 // ===========================
 .home {
   color: white;
+
+  a {
+    text-decoration: none;
+  }
   
   &.page {
     margin-bottom: 0;
