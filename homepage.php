@@ -28,9 +28,9 @@
         ?>
       </div><!-- .entry-content -->
       
-      <?php if ( get_edit_post_link() ) : ?>
+      <?php // if ( get_edit_post_link() ) : ?>
         <footer class="entry-footer">
-          <?php
+          <!-- <?php
             edit_post_link(
               sprintf(
                 wp_kses(
@@ -47,9 +47,9 @@
               '<span class="edit-link">',
               '</span>'
             );
-          ?>
+          ?> -->
         </footer><!-- .entry-footer -->
-      <?php endif; ?>
+      <?php // endif; ?>
       <?php
         endwhile; // End of the loop.
       ?>
