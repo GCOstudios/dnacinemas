@@ -7,14 +7,25 @@
 
   .menu-panel {
     background-color: rgba(0,0,0, 0.75);
-    border-right: 1px solid white;
-    width: cre(85px);
+    border-right: 1px solid rgba(255,255,255,0.45);
+    width: cre(70px);
     height: 100vh;
     padding-top: cre(54px);
     position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
+  }
+
+  .menu-toggle {
+    background-color: transparent;
+    border: 0;
+    
+    .menu-button-text {
+      color: white;
+      display: block;
+      transform: rotate(-90deg);
+    }
   }
 
   #primary-menu {
@@ -44,7 +55,7 @@
       }
     }
   }
-}
+} // .main-navigation
 
 // .main-navigation {
 // 	clear: both;
