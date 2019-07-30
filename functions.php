@@ -116,6 +116,12 @@ function dnacinemas_widgets_init() {
 }
 add_action( 'widgets_init', 'dnacinemas_widgets_init' );
 
+// Import Google Fonts
+function custom_add_google_fonts() {
+  wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,700', false );
+}
+add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
+
 /**
  * Enqueue scripts and styles.
  */
