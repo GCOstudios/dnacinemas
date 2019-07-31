@@ -3,8 +3,13 @@
 }
 
 .post,
-.page {
-	margin: 0 0 1.5em;
+.page:not(.home) {
+  margin: 0 0 1.5em;
+
+  .site-main {
+    padding-left: cre(120px);
+    padding-right: cre(20px);
+  }
 }
 
 .updated:not(.published) {
