@@ -128,9 +128,9 @@ add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
 function dnacinemas_scripts() {
 	wp_enqueue_style( 'dnacinemas-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'dnacinemas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20190731', true );
+	wp_enqueue_script( 'dnacinemas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20190801', true );
 
-	wp_enqueue_script( 'dnacinemas-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20190731', true );
+	wp_enqueue_script( 'dnacinemas-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20190801', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
