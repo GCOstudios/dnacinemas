@@ -46,7 +46,7 @@
 
 		<nav id="site-navigation" class="main-navigation">
       <div class="menu-panel">
-        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="menu-button-text"><?php esc_html_e( 'Menu', 'dnacinemas' ); ?></span></button>
+        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="burger"></span><span class="menu-button-text"><?php esc_html_e( 'Menu', 'dnacinemas' ); ?></span></button>
       </div>
 			<?php
 			wp_nav_menu( array(
