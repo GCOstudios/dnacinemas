@@ -1,10 +1,15 @@
+// Homepage header
 .site-header {
-  background-color: black;
   width: 100%;
-  // padding: cre(10px) 0 cre(40px);
-  // margin-bottom: cre(40px);
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
+
+  .home & {
+    background-color: black;
+    position: relative;
+  }
 
   @include breakpoint($bp-mobile) {
     // padding: cre(10px) 0 cre(40px);
