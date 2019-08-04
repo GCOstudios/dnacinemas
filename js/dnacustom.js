@@ -1,0 +1,1 @@
+jQuery(function(o){"use strict";({init:function(){this.scrollDown(),this.scrollUp()},scrollDown:function(){o(".scroll-down").on("click",function(){o("html, body").animate({scrollTop:o(".entry-content").offset().top},1500)})},scrollUp:function(){o(".scroll-up").on("click",function(){o("html, body").animate({scrollTop:0},1e3)})}}).init()});
