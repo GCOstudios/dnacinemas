@@ -1,9 +1,10 @@
 .site-footer {
-  font-size: cre(14px);
+  font-size: 0.75em;
   font-weight: 400;
   padding: 1rem;
   position: relative;
   text-align: center;
+  text-transform: uppercase;
   z-index: 1;
 
   .home & {
