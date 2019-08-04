@@ -3,12 +3,56 @@
 }
 
 .post,
-.page:not(.home) {
+.page {
   margin: 0 0 1.5em;
 
-  .site-main {
-    padding-left: cre(120px);
-    padding-right: cre(20px);
+  &:not(.home) {
+
+    article {
+
+      .entry-header {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+  
+        &::before {
+          content: '';
+          background-color: rgba(0,0,0,0.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+  
+        .entry-title {
+          position: relative;
+          z-index: 1;
+        }
+
+        .scroll-down {
+          position: absolute;
+          bottom: cre(20px);
+          left: 50%;
+          transform: translateX(-50%);
+          cursor: pointer;
+          z-index: 1;
+        }
+      } // .entry-header
+
+      .entry-content {
+        max-width: cre(940px);
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 }
 
