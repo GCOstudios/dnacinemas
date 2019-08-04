@@ -26,8 +26,9 @@
     outline: 0;
     position: relative;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 100px;
+    padding: 0 30px;
 
     &:hover {
       &::before,
@@ -50,13 +51,17 @@
       width: 20px;
       height: 3px;
       position: absolute;
-      top: 0;
+      top: cre(16px);
       left: 50%;
       transform: translate3d(-50%, 0, 0) rotate(0deg);
       transition: 0.5s ease;
     }
 
     .burger {
+      display: block;
+      height: 30px;
+      width: 30px;
+      padding-top: 10px;
 
       &::before {
         content: '';
@@ -64,7 +69,7 @@
         width: 30px;
         height: 3px;
         position: absolute;
-        top: -8px;
+        top: 8px;
         left: 50%;
         transform: translate3d(-50%, 0, 0);
         transition: 0.5s ease;
@@ -76,7 +81,7 @@
         width: 10px;
         height: 3px;
         position: absolute;
-        top: 8px;
+        top: 24px;
         left: 50%;
         transform: translate3d(-50%, 0, 0);
         transition: 0.5s ease;
@@ -87,6 +92,7 @@
       color: white;
       display: block;
       transform: translate3d(0,40px,0) rotate(-90deg);
+      padding: 0 0 40px 40px;
     }
   }
 
@@ -112,13 +118,14 @@
       }
     }
 
+    .menu-primary-container,
     #primary-menu {
       transform: translate3d(0,0,0);
     }
   }
 
   // Main Navigation
-  #primary-menu {
+  .menu-primary-container {
     display: flex;
     flex-flow: column;
     justify-content: center;
