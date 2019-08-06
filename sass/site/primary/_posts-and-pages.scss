@@ -31,26 +31,99 @@
           top: 0;
           left: 0;
         }
+
+        .entry-surtitle {
+          font-size: 1.5rem;
+          font-weight: 500;
+          margin-bottom: 0.25rem;
+          position: relative;
+          text-transform: uppercase;
+          z-index: 1;
+        }
   
         .entry-title {
+          font-size: 5rem;
+          font-weight: 300;
+          line-height: 1.11;
+          color: $yellow;
+          margin-top: 0.25rem;
+          margin-bottom: 1.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .entry-subtitle {
+          font-size: 1.125rem;
+          font-weight: 200;
+          line-height: 1.61;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 3rem;
+          max-width: 50%;
           position: relative;
           z-index: 1;
         }
 
         .scroll-down {
+          font-size: 0.65rem;
+          background-color: transparent;
+          border: 0;
+          color: white;
           position: absolute;
           bottom: cre(20px);
           left: 50%;
           transform: translateX(-50%);
           cursor: pointer;
           z-index: 1;
-        }
+          text-transform: uppercase;
+
+          &::before {
+            font-family: 'icomoon';
+            font-size: cre(22px);
+            content: '\e900';
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+          }
+
+          &::after {
+            content: '';
+            border: 1px solid white;
+            border-radius: 100%;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: -65px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.3s ease;
+          }
+
+          &:hover {
+
+            &::after {
+              background-color: $yellow;
+            }
+          }
+        } // .scroll-down
       } // .entry-header
 
       .entry-content {
         max-width: cre(940px);
         margin-left: auto;
         margin-right: auto;
+      }
+    } // article
+  } // &:not(.home)
+
+  &.admin-bar {
+
+    article {
+
+      .entry-header {
+        height: calc(100vh - 32px);
       }
     }
   }
