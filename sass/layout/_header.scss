@@ -6,6 +6,10 @@
   left: 0;
   z-index: 2;
 
+  .admin-bar & {
+    top: cre(32px);
+  }
+
   .home & {
     background-color: black;
     position: relative;
