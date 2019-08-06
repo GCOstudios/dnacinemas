@@ -6,7 +6,7 @@
   left: 0;
   z-index: 2;
 
-  .admin-bar & {
+  .admin-bar:not(.home) & {
     top: cre(32px);
   }
 
