@@ -118,7 +118,7 @@ add_action( 'widgets_init', 'dnacinemas_widgets_init' );
 
 // Import Google Fonts
 function custom_add_google_fonts() {
-  wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,700', false );
+  wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,900&display=swap', false );
 }
 add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
 
@@ -127,6 +127,10 @@ add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
  */
 function dnacinemas_scripts() {
   wp_enqueue_style( 'dnacinemas-style', get_stylesheet_uri(), false, '20190805');
+
+  wp_enqueue_style( 'aos-style', 'https://unpkg.com/aos@2.3.1/dist/aos.css', false, '20190805');
+
+  wp_enqueue_script('aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery'), '20190804', true);
   
   wp_enqueue_script('dnacinemas-js', get_template_directory_uri() . '/js/dnacustom.js', array('jquery'), '20190804', true);
 
