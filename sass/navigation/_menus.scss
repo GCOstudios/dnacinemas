@@ -1,16 +1,21 @@
 .main-navigation {
-  width: 1px;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
+
+  @include breakpoint($bp-mobile) {
+    width: 1px;
+    height: 100vh;
+  }
 
   // Panel where button toggle exists
   .menu-panel {
     display: flex;
     flex-flow: row;
     justify-content: center;
-    background-color: rgba(0,0,0, 0.75);
+    background-color: transparent;
     width: cre(70px);
     height: 100vh;
     padding-top: cre(54px);
@@ -18,6 +23,10 @@
     top: 0;
     left: 0;
     z-index: 10;
+
+    @include breakpoint($bp-mobile) {
+      background-color: rgba(0,0,0, 0.75);
+    }
   }
 
   .menu-toggle {
@@ -47,7 +56,7 @@
     &::before,
     &::after {
       content: '';
-      background-color: white;
+      background-color: $yellow;
       width: 20px;
       height: 3px;
       position: absolute;
@@ -55,6 +64,10 @@
       left: 50%;
       transform: translate3d(-50%, 0, 0) rotate(0deg);
       transition: 0.5s ease;
+
+      @include breakpoint($bp-mobile) {
+        background-color: white;
+      }
     }
 
     .burger {
@@ -65,7 +78,7 @@
 
       &::before {
         content: '';
-        background-color: white;
+        background-color: $yellow;
         width: 30px;
         height: 3px;
         position: absolute;
@@ -73,11 +86,15 @@
         left: 50%;
         transform: translate3d(-50%, 0, 0);
         transition: 0.5s ease;
+
+        @include breakpoint($bp-mobile) {
+          background-color: white;
+        }
       }
   
       &::after {
         content: '';
-        background-color: white;
+        background-color: $yellow;
         width: 10px;
         height: 3px;
         position: absolute;
@@ -85,14 +102,22 @@
         left: 50%;
         transform: translate3d(-50%, 0, 0);
         transition: 0.5s ease;
+
+        @include breakpoint($bp-mobile) {
+          background-color: white;
+        }
       }
     }
     
     .menu-button-text {
-      color: white;
+      color: $yellow;
       display: block;
       transform: translate3d(0,40px,0) rotate(-90deg);
       padding: 0 0 40px 40px;
+
+      @include breakpoint($bp-mobile) {
+        color: white;
+      }
     }
   }
 
@@ -120,7 +145,22 @@
 
     .menu-primary-container,
     #primary-menu {
+      padding-right: cre(60px);
       transform: translate3d(0,0,0);
+
+      .nav-menu {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+      }
+    }
+
+    .menu-primary-container {
+      background-color: rgba(0,0,0, 0.85);
+      width: 100%;
+
+      @include breakpoint($bp-mobile) {
+        width: auto;
+      }
     }
   }
 
@@ -129,22 +169,29 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-    // align-items: center;
-    background-color: rgba(0,0,0, 0.75);
-    border-left: 1px solid rgba(255,255,255,0.45);
-    width: cre(500px);
+    background-color: transparent;
     height: 100%;
     position: absolute;
     top: 0;
-    left: cre(70px);
+    left: 0;
     transform: translate3d(-100%,0,0);
     transition: 0.25s cubic-bezier(0,0,.58,1);
+
+    @include breakpoint($bp-mobile) {
+      background-color: rgba(0,0,0, 0.75);
+      border-left: 1px solid rgba(255,255,255,0.45);
+      left: cre(70px);
+    }
 
     .nav-menu {
       @include list-reset;
       margin-left: cre(80px)!important;
+      opacity: 0;
+      transform: translate3d(-100%,0,0);
+      transition: 0.7s ease;
 
       li {
+        white-space: nowrap;
 
         a {
           display: inline-block;
@@ -176,7 +223,11 @@
         &.current_page_item {
 
           a {
-            color: rgba(249,210,125,.75);
+            color: rgba(249,210,125,1);
+
+            @include breakpoint($bp-mobile) {
+              color: rgba(249,210,125,.75);
+            }
 
             &::before {
               display: none;
