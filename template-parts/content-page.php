@@ -13,8 +13,16 @@
 
   <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
   
-	<header class="entry-header" style="background-image: url('<?php echo $backgroundImg[0]; ?>');">
-    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+  <header class="entry-header" style="background-image: url('<?php echo $backgroundImg[0]; ?>');">
+    <?php
+      if (get_post_meta( get_the_ID(), 'surtitle', true )) { ?>
+        <span class="entry-surtitle"><?php echo get_post_meta($post->ID, 'surtitle', true) ?></span>
+    <?php }
+      the_title( '<h1 class="entry-title">', '</h1>' );
+
+      if (get_post_meta( get_the_ID(), 'surtitle', true )) { ?>
+        <span class="entry-subtitle"><?php echo get_post_meta($post->ID, 'subtitle', true) ?></span>
+      <?php } ?>
     <button class="scroll-down">Scroll Down</button>
 	</header><!-- .entry-header -->
 
