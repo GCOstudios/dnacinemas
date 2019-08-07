@@ -126,13 +126,9 @@ add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
  * Enqueue scripts and styles.
  */
 function dnacinemas_scripts() {
-  wp_enqueue_style( 'dnacinemas-style', get_stylesheet_uri(), false, '20190805');
-
-  wp_enqueue_style( 'aos-style', 'https://unpkg.com/aos@2.3.1/dist/aos.css', false, '20190805');
-
-  wp_enqueue_script('aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery'), '20190804', true);
+  wp_enqueue_style( 'dnacinemas-style', get_stylesheet_uri(), false, '2019080714');
   
-  wp_enqueue_script('dnacinemas-js', get_template_directory_uri() . '/js/dnacustom.js', array('jquery'), '20190804', true);
+  wp_enqueue_script('dnacinemas-js', get_template_directory_uri() . '/js/dnacustom.js', array('jquery'), '201908074', true);
 
 	wp_enqueue_script( 'dnacinemas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20190801', true );
 
