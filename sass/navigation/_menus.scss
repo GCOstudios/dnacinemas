@@ -42,13 +42,13 @@
     &:hover {
       &::before,
       &::after {
-        background-color: $yellow;
+        background-color: $blue;
       }
 
       .burger {
         &::before,
         &::after {
-          background-color: $yellow;
+          background-color: $blue;
         }
       }
     }
@@ -56,7 +56,7 @@
     &::before,
     &::after {
       content: '';
-      background-color: $yellow;
+      background-color: $blue;
       width: 20px;
       height: 3px;
       position: absolute;
@@ -78,7 +78,7 @@
 
       &::before {
         content: '';
-        background-color: $yellow;
+        background-color: $blue;
         width: 30px;
         height: 3px;
         position: absolute;
@@ -94,7 +94,7 @@
   
       &::after {
         content: '';
-        background-color: $yellow;
+        background-color: $blue;
         width: 10px;
         height: 3px;
         position: absolute;
@@ -110,7 +110,7 @@
     }
     
     .menu-button-text {
-      color: $yellow;
+      color: $blue;
       display: block;
       transform: translate3d(0,40px,0) rotate(-90deg);
       padding: 0 0 40px 40px;
@@ -168,9 +168,10 @@
   .menu-primary-container {
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: transparent;
     height: 100%;
+    padding-top: 5rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -206,7 +207,7 @@
             content: '';
             width: 0;
             height: 1px;
-            background: rgba(249,210,125,.75);
+            background: white;
             position: absolute;
             left: 0;
             bottom: 8px;
@@ -223,10 +224,10 @@
         &.current_page_item {
 
           a {
-            color: rgba(249,210,125,1);
+            color: white;
 
             @include breakpoint($bp-mobile) {
-              color: rgba(249,210,125,.75);
+              color: white;
             }
 
             &::before {
