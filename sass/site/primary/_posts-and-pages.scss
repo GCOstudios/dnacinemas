@@ -43,18 +43,22 @@
   
         .entry-title {
           font-size: 5rem;
-          font-weight: 300;
+          font-size: 3rem;
+          font-weight: 400;
           line-height: 1.11;
-          color: $yellow;
+          line-height: 1;
+          letter-spacing: 0.5px;
+          color: white;
           margin-top: 0.25rem;
-          margin-bottom: 1.25rem;
+          margin-bottom: 0.83em;
           position: relative;
+          text-transform: uppercase;
           z-index: 1;
         }
 
         .entry-subtitle {
-          font-size: 1.125rem;
-          font-weight: 200;
+          font-size: 1rem;
+          font-weight: normal;
           line-height: 1.61;
           margin-left: auto;
           margin-right: auto;
@@ -104,16 +108,32 @@
           &:hover {
 
             &::after {
-              background-color: $yellow;
+              background-color: #163052;
             }
           }
         } // .scroll-down
       } // .entry-header
 
       .entry-content {
-        max-width: cre(940px);
+        max-width: cre(1200px);
         margin-left: auto;
         margin-right: auto;
+        padding-left: cre(20px);
+        padding-right: cre(20px);
+
+        @include breakpoint($bp-mobile) {
+          padding-left: cre(100px);
+        }
+
+        @include breakpoint(1400px) {
+          padding-left: 1.25rem;
+        }
+
+        .compartment {
+          max-width: cre(940px);
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
     } // article
   } // &:not(.home)
