@@ -50,16 +50,37 @@ jQuery(function($) {
     // Animate on scroll library
     // ==============================================
     animations: function() {
-      
-      // Initiate the animations
-      // ==========================
-      AOS.init({
-        duration: 1000
-      });
 
       // Target elements to animate
       // ===============================
-      // $('.entry-title').attr('data-aos', 'fade-up');
+      if ($('.home').length) {
+        $('.home .entry-content').attr('data-aos', 'fade-up');
+      }
+
+      $('.entry-surtitle').attr('data-aos', 'fade-up');
+      $('.entry-title').attr('data-aos', 'fade-up');
+      $('.entry-subtitle').attr('data-aos', 'fade-up');
+
+      // Create universal targets
+      // =================================
+      var $fadeUp = $('.fade-up'),
+          $isFadeUp = $fadeUp.length,
+          $fadeRight = $('.fade-right'),
+          $isFadeRight = $fadeRight.length,
+          $fadeLeft = $('.fade-left'),
+          $isFadeLeft = $fadeLeft.length;
+
+      if ($isFadeUp) {
+        $fadeUp.attr('data-aos', 'fade-up');
+      }
+      
+      if ($isFadeRight) {
+        $fadeRight.attr('data-aos', 'fade-right');
+      }
+      
+      if ($isFadeLeft) {
+        $fadeLeft.attr('data-aos', 'fade-left');
+      }
     }
 
   };
