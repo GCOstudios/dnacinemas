@@ -18,9 +18,13 @@
       if (get_post_meta( get_the_ID(), 'surtitle', true )) { ?>
         <span class="entry-surtitle"><?php echo get_post_meta($post->ID, 'surtitle', true) ?></span>
     <?php }
-      the_title( '<h1 class="entry-title">', '</h1>' );
+      if (get_post_meta( get_the_ID(), 'title', true )) { ?>
+        <h1 class="entry-title"><?php echo get_post_meta($post->ID, 'title', true) ?></h1>
+    <?php } else {
+        the_title( '<h1 class="entry-title">', '</h1>' );
+      }
 
-      if (get_post_meta( get_the_ID(), 'surtitle', true )) { ?>
+      if (get_post_meta( get_the_ID(), 'subtitle', true )) { ?>
         <span class="entry-subtitle"><?php echo get_post_meta($post->ID, 'subtitle', true) ?></span>
       <?php } ?>
     <button class="scroll-down">Scroll Down</button>
