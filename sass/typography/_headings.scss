@@ -4,7 +4,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 3.125rem;
+  font-size: 2rem;
   font-weight: 200;
   line-height: 1;
+  word-wrap: break-word;
+
+  @include breakpoint($bp-mobile) {
+    font-size: 3.125rem;
+  }
 }
