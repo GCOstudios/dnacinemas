@@ -126,7 +126,7 @@ add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
  * Enqueue scripts and styles.
  */
 function dnacinemas_scripts() {
-  wp_enqueue_style( 'dnacinemas-style', get_stylesheet_uri(), false, '2019080714');
+  wp_enqueue_style( 'dnacinemas-style', get_stylesheet_uri(), false, '20190808');
   
   wp_enqueue_script('dnacinemas-js', get_template_directory_uri() . '/js/dnacustom.js', array('jquery'), '201908074', true);
 
