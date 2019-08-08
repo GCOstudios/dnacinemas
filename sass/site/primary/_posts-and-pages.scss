@@ -33,27 +33,38 @@
         }
 
         .entry-surtitle {
-          font-size: 1.5rem;
+          font-size: 1rem;
           font-weight: 500;
           margin-bottom: 0.25rem;
           position: relative;
           text-transform: uppercase;
           z-index: 1;
+
+          @include breakpoint($bp-mobile) {
+            font-size: 1.5rem;
+          }
         }
   
         .entry-title {
-          font-size: 5rem;
-          font-size: 3rem;
-          font-weight: 400;
+          font-size: 2.4rem;
+          font-weight: 200;
           line-height: 1.11;
-          line-height: 1;
+          line-height: 1.2;
           letter-spacing: 0.5px;
           color: white;
           margin-top: 0.25rem;
-          margin-bottom: 0.83em;
+          margin-bottom: 1rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
           position: relative;
           text-transform: uppercase;
           z-index: 1;
+
+          @include breakpoint($bp-mobile) {
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 0.83em;
+          }
         }
 
         .entry-subtitle {
@@ -105,12 +116,12 @@
             transition: 0.3s ease;
           }
 
-          &:hover {
+          // &:hover {
 
-            &::after {
-              background-color: #163052;
-            }
-          }
+          //   &::after {
+          //     background-color: rgba(#163052, 0.7);
+          //   }
+          // }
         } // .scroll-down
       } // .entry-header
 
